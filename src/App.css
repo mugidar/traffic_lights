@@ -4,6 +4,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 70px;
 }
 .traffic_light {
   scale: 2;
@@ -15,23 +17,38 @@
   border: 1px solid black;
 }
 
-.red, .orange, .green {
+.red,
+.orange,
+.green {
   width: 20px;
   height: 20px;
   border-radius: 100%;
   border: 1px solid black;
 }
 
+.light {
+  position: relative;
+}
 
+.timer {
+  color: white;
+  position: absolute;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .red.active {
-  background-color: red;  
+  background-color: red;
 }
 .orange.active {
   background-color: orange;
 }
 .green.active {
-  background-color: green;   
+  background-color: green;
 }
 
 .blinking {
